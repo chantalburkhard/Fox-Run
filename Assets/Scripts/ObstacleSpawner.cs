@@ -22,7 +22,7 @@ public class ObstacleSpawner : MonoBehaviour {
     
     void InitObstacles() {
        index = 0;
-        //initializes game objects
+        //initialize game objects
         for (int i = 0; i < obstacles.Length * 3; i++){
         	GameObject obj = Instantiate(obstacles[index], transform.position, Quaternion.identity);
         	obstaclesToSpawn.Add(obj);
@@ -53,7 +53,7 @@ public class ObstacleSpawner : MonoBehaviour {
     	StartCoroutine (SpawnRandomObstacle());
     }
 
-    IEnumerator ChangeSpeed(){
+    /*IEnumerator ChangeSpeed(){
         //change obstacle speed to make the game more difficult by time
         //new speed
         speed -= 1f;
@@ -65,5 +65,5 @@ public class ObstacleSpawner : MonoBehaviour {
         yield return new WaitForSeconds(10f);
         //repeat method
         StartCoroutine(ChangeSpeed());
-    }
+    }*/
 }
